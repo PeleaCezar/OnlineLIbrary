@@ -1,0 +1,85 @@
+﻿@model OnlineLibrary1.ViewModels.ProductsNumberViewModel
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "List of available books";
+}
+
+<h2>List of available books</h2>
+
+<p>
+   @(String.IsNullOrWhiteSpace(Model.Search)? "All the products are displayed" :"Search criteria" + Model.Search + "it returned") @Model.Products.TotalItemCount books.
+
+</p>
+<p>
+    @Html.ActionLink("Add a new book", "Create")
+    @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+    {
+        @* <label>Select category:</label> @Html.DropDownListFor(vmod => vmod.CatName, Model.CategoryFilterItems, "All") *@
+        <label>Select category:</label> @Html.DropDownListFor(vmod => vmod.CatName, Model.CategoryFilterItems, "All")
+        <label>Sort by:</label> @Html.DropDownListFor(vmod => vmod.SortBy, new SelectList(Model.Sorts, "Value", "Key"), "Default")
+        <input type="submit" value="Filter" />
+        @* <input type="hidden" name="Search" id="Search" value="@ViewBag.Search" /> *@
+        <input type="hidden" name="Search" id="Search" value="@Model.Search" />
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CatName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.First().Isbn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.First().Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.First().Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.First().Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Products.First().Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Products) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Isbn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @if (this.User.IsInRole("Admin"))
+            {
+                @Html.ActionLink("Edit |", "Edit", new { id = item.ID })
+                @Html.ActionLink("Details |", "Details", new { id = item.ID })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            }
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+     Page @(Model.Products.PageCount<Model.Products.PageNumber ? 0 : Model.Products.PageNumber) din @Model.Products.PageCount
+    @Html.PagedListPager(Model.Products, page => Url.Action("Index", new { CatName = Model.CatName, Seach = Model.Search, SortBy = Model.SortBy, page }))
+
+</div>
