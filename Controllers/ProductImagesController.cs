@@ -125,9 +125,12 @@ namespace OnlineLibrary1
                 }
                 return RedirectToAction("Index");
             }
+           
             //Returnarea vizualizarii implicite
             return View();
         }
+
+        
 
         // GET: ProductImages/Edit/5
         public ActionResult Edit(int? id)

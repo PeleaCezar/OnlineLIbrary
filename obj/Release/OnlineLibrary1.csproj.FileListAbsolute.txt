@@ -1,0 +1,15 @@
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.csprojAssemblyReference.cache
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.Initial.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.Two.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.CategoryNameValidation.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.ProductValidation.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.Exemple.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.ProductValidationFinal.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.ProductValidate.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.ProductandCategory.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.Test.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.ProductImages.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.UniqueFieldName.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.Migrations.ProductImageMapping.resources
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.csproj.GenerateResource.cache
+C:\Users\Cezar\source\repos\OnlineLibrary1\OnlineLibrary1\obj\Release\OnlineLibrary1.csproj.CoreCompileInputs.cache
